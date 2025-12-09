@@ -29,11 +29,14 @@ public class MainActivity extends AppCompatActivity {
         String[] countries = {"USA", "Canada", "Germany", "French", "Italy", "Japan"};
 
         // 3) Adapter: acts as a bridge between the 'data source' and the 'ApaterView'
+        /*
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_list_item_1,
                 countries
         );
+         */
+        myCustomAdapter adapter = new myCustomAdapter(this, countries);
 
         // 4) Set the adapter to the ListView
         listView.setAdapter(adapter);
